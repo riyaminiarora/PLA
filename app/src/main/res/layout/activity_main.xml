@@ -76,11 +76,13 @@
         android:id="@+id/btnAbout"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
         android:text="About"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/btnFavourite"
+        app:layout_constraintStart_toStartOf="@+id/btnFavourite"
+        app:layout_constraintTop_toBottomOf="@+id/btnFavourite" />
 
     <ImageView
         android:id="@+id/imglogo"
@@ -96,5 +98,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="700dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,16 +7,34 @@ public class Book {
     private int pages;
     private String imageUrl;
     private String shortDesc;
-    private String Desc;
+    private String longDesc;
+    private boolean isExpanded;
 
-    public Book(int id, String name, String author, int pages, String imageUrl, String shortDesc, String desc) {
+    public Book(int id, String name, String author, int pages, String imageUrl, String shortDesc, String longDesc) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.pages = pages;
         this.imageUrl = imageUrl;
         this.shortDesc = shortDesc;
-        Desc = desc;
+        this.longDesc = longDesc;
+        isExpanded=false;
+    }
+
+    public String getLongDesc() {
+        return longDesc;
+    }
+
+    public void setLongDesc(String longDesc) {
+        this.longDesc = longDesc;
+    }
+
+    public boolean isExpanded() {
+        return isExpanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        isExpanded = expanded;
     }
 
     public int getId() {
@@ -67,13 +85,6 @@ public class Book {
         this.shortDesc = shortDesc;
     }
 
-    public String getDesc() {
-        return Desc;
-    }
-
-    public void setDesc(String desc) {
-        Desc = desc;
-    }
 
     @Override
     public String toString() {
@@ -84,7 +95,7 @@ public class Book {
                 ", pages=" + pages +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", shortDesc='" + shortDesc + '\'' +
-                ", Desc='" + Desc + '\'' +
+                ", Desc='" + longDesc + '\'' +
                 '}';
     }
 }

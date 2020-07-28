@@ -2,6 +2,7 @@ package com.example.mylibrary;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -19,9 +20,14 @@ public class AllBooksActivity extends AppCompatActivity {
         adapter= new BookRecViewAdapter(this);
         booksRecView=findViewById(R.id.booksRecView);
         booksRecView.setAdapter(adapter);
-        booksRecView.setLayoutManager(new GridLayoutManager(this,2));
+        booksRecView.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<Book> books=new ArrayList<>();
-        
+        books.add(new Book(1,"1Q84","Haruki Murakami",1350,"https://images.penguinrandomhouse.com/cover/9780307476463","A work of brilliance","long Desc"));
+        books.add(new Book(1,"1Q84","Haruki Murakami",1350,"https://images.penguinrandomhouse.com/cover/9780307476463","A work of brilliance","long Desc"));
+        adapter.setBooks(Utils.getInstance().getAllBooks());
+
+
+
 
 
     }
