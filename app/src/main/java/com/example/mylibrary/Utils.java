@@ -91,5 +91,17 @@ public class Utils {
         return currentlyReadingBooks.add(book); //returns true if book added
 
     }
+    public boolean removeFromAlreadyRead(Book book){
+       return alreadyReadBooks.remove(book); //returns true if book removed from arraylist
+    }
+    public boolean removeFromWantToRead(Book book){
+        return wantToReadBooks.remove(book); //returns true if book removed from arraylist
+    }
+    public boolean removeFromFavorites(Book book){
+        return favoriteBooks.remove(book); //returns true if book removed from arraylist
+    }
+    public boolean removeFromCurrentlyReading(Book book){
+        return currentlyReadingBooks.remove(book); //returns true if book removed from arraylist
+    }
 
 }
