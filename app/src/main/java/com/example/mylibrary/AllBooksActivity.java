@@ -17,6 +17,7 @@ public class AllBooksActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_books);
+        //overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
         adapter= new BookRecViewAdapter(this,"allBooks");
         booksRecView=findViewById(R.id.booksRecView);
         booksRecView.setAdapter(adapter);
@@ -25,10 +26,5 @@ public class AllBooksActivity extends AppCompatActivity {
         books.add(new Book(1,"1Q84","Haruki Murakami",1350,"https://images.penguinrandomhouse.com/cover/9780307476463","A work of brilliance","long Desc"));
         books.add(new Book(1,"1Q84","Haruki Murakami",1350,"https://images.penguinrandomhouse.com/cover/9780307476463","A work of brilliance","long Desc"));
         adapter.setBooks(Utils.getInstance().getAllBooks());
-
-
-
-
-
     }
 }
