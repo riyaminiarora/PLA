@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.create().show();
             }
         });
-        Utils.getInstance();
+        Utils.getInstance(this);
     }
     private void initViews(){
         btnAllBooks=findViewById(R.id.btnAllBooks);
